@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>page title</title>
+
+    <style>
+        body {
+            background-color: #68e056;
+        }
+
+        .text {
+            font-family: comic San Ms;
+            background-color: #68be4a;
+        }
+
+        .centred {
+            position: absolute;
+            top: 400px;
+            left: 500px;
+            transform: translate(-50%, -50%);
+        }
+
+        .firstblock {
+
+            background-color: #f2f2f2;
+
+        }
+
+        .centre-block {
+            top: 150px;
+            width: 500px;
+            padding: 35px;
+            margin: 25px;
+            display: inline-block;
+            -webkit-box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.94);
+            -moz-box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.94);
+            box-shadow: 10px 10px 17px -12px rgba(0, 0, 0, 0.94);
+            background-color: white;
+        }
+
+        .small-block input {
+
+            background: #f2f2f2;
+            border: 0px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .submit-small-block{
+            background: #f2f2f2;
+            border: 0px;
+        
+            padding: 30px;
+           
+
+        }
+
+        .last-submitbox {
+
+            text-align: center;
+            border: 0px;
+            background: #68be4a;
+            padding: 10px;
+
+        }
+
+        .words-color {
+            background-color: #68be4a;
+        }
+
+        a {
+
+            text-decoration: none;
+            color: green;
+        }
+
+        .centre-text {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="firstblock">
+        <div class="centred">
+            <div class="overwrite">
+                <div class="centre-block">
+                    <form action="/action_page.php">
+                        <div class="small-block">
+                            <input type="text" name="FirstName" value="" placeholder="username">
+                        </div>
+                        <br>
+                        <div class="small-block">
+                            <input type="text" name="LastName" value="" placeholder="password">
+                        </div>
+                        <br>
+                        
+                            <div class="last-submitbox">
+                                <input type="Submit" text="submit" value="" placeholder="LOGIN">
+                            </div>
+                        
+                        <p class="centre-text">Not registered? <a href="https://www.w3schools.com/html/">create an
+                                account</a></p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
