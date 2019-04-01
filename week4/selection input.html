@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+
+</body>
+
+
+<script>
+
+select size="1" id="slt_country" name="country">
+        <option value=""> - Select - </option>
+        <option value="AF">Afghanistan</option>
+        <option value="AL">Albania</option>
+        <option value="DZ">Algeria</option>
+
+
+        var selected_index = oForm.elements["country"].selectedIndex;
+ 
+if(selected_index > 0)
+{
+   var selected_option_value = oForm.elements["country"].options[selected_index].value;
+   var selected_option_text = oForm.elements["country"].options[selected_index].text;
+}
+else
+{
+   alert('Please select a country from the drop down list');
+}
+         
+</script>
+</html> 
+
+
+
+
+
+
+
+
