@@ -17,29 +17,27 @@ singleButton.onclick = singleButtonClick;
 // FUNCTION TO ADD ITEM 
 list =[];
 
-function addButtonClick() {
-
+function addButtonClick()
+ {
 
   var inputValue = document.getElementById("item").value;
   //var inputValue = user input;
-
-  //alert("Your item is :" +inputValue+" ");
 
   if (validationCheck(inputValue)==true)
   {
     // add item 
      //Now construct a quick list element
     //Defining a listener for our button, specifically, an onclick handler
-document.getElementById("item").onclick = function()
- {
-  //First things first, we need our text:
-  var inputValue = document.getElementById("item").value; //.value gets input values
+    document.getElementById("item").onclick = function()
+   {
+       //First things first, we need our text:
+        var inputValue = document.getElementById("item").value; //.value gets input values
 
-  //Now construct a quick list element
-  var li = "<li>" + text + "</li>";
+         //Now construct a quick list element
+         var li = "<li>" + inputValue + "</li>";
 
-  //Now use appendChild and add it to the list!
-  document.getElementById("list").appendChild(li);
+         //Now use appendChild and add it to the list!
+        document.getElementById("list").appendChild(li);
  }
 
 
