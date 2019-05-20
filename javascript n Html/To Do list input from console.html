@@ -36,15 +36,17 @@
         document.getElementById("item").value ="" ;
         }
 
-       // console.log('i m at : ' + );
+    
         console.log(list);
         //clear screen
         var itemToAdd = document.getElementById("itemlist")
-        var stayitem = itemToAdd.lastElementChild;
-        while (stayitem){
-            itemToAdd.removeChild(stayitem);
-            stayitem= itemToAdd.lastElementChild;
-        }
+        // var stayitem = itemToAdd.lastElementChild;
+        // while (stayitem){
+        //     itemToAdd.removeChild(stayitem);
+        //     stayitem= itemToAdd.lastElementChild;
+        // }
+
+        itemToAdd.innerHTML = ""
         
         var i;
         for (i=0;i<list.length;i++){
