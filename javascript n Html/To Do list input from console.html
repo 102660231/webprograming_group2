@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <input type="value"id="item">
+    <button id="add">Item to add.</button>
+    <button id="remove">Remove all items</button>
+    <button id="single remove">Remove one item only</button>
+    <ul id = "itemlist">
+
+    </ul>
+
+</body>
+
+
+<script>
+
+    var exampleButton = document.getElementById("add");
+    exampleButton.onclick = ButtonClicked;
+    var removeButton = document.getElementById("remove");
+    removeButton.onclick = RemoveButtonClick
+    var singleButton = document.getElementById("single remove");
+    singleButton.onclick= singleButtonClick;
+    
+    list =[];
+
+    function ButtonClicked() {
+       // var value1 = parseInt(document.getElementById("num1").value);
+        var value2 = document.getElementById("item").value;
+       if (validationCheck(value2)==true)
+       {
+        list.push(value2);
+        document.getElementById("item").value ="" ;
+        }
+
+       // console.log('i m at : ' + );
+        console.log(list);
+        //clear screen
+        var itemToAdd = document.getElementById("itemlist")
+        var stayitem = itemToAdd.lastElementChild;
+        while (stayitem){
+            itemToAdd.removeChild(stayitem);
+            stayitem= itemToAdd.lastElementChild;
+        }
+        
+        var i;
+        for (i=0;i<list.length;i++){
+            var itemlist= document.createElement("li")
+            var itemToAdd = document.getElementById("itemlist")
+            itemToAdd.appendChild(itemlist)
+            var displayitem = document.createTextNode(list[i])
+            itemlist.appendChild(displayitem)
+        }
+
+    }
+    //https://www.geeksforgeeks.org/remove-all-the-child-elements-of-a-dom-node-in-javascript/
+// remove all items
+    function RemoveButtonClick()
+    {
+        var itemToAdd = document.getElementById("itemlist")
+        var stayitem = itemToAdd.lastElementChild;
+        while (stayitem){
+            itemToAdd.removeChild(stayitem);
+            stayitem= itemToAdd.lastElementChild;
+            
+        }
+        list =[];
+    }
+
+    function singleButtonClick()
+    {
+        var value2 = document.getElementById("item").value;
+
+       //get item from user as value2
+       // check if not -1
+       if (list.indexOf(value2)!=-1)
+       {
+        list.splice(list.indexOf(value2),1);
+
+         //clear screen
+         var itemToAdd = document.getElementById("itemlist")
+        var stayitem = itemToAdd.lastElementChild;
+        while (stayitem){
+            itemToAdd.removeChild(stayitem);
+            stayitem= itemToAdd.lastElementChild;
+        }
+       
+        var i;
+        for (i=0;i<list.length;i++){
+            var itemlist= document.createElement("li")
+            var itemToAdd = document.getElementById("itemlist")
+            itemToAdd.appendChild(itemlist)
+            var displayitem = document.createTextNode(list[i])
+            itemlist.appendChild(displayitem)
+        }
+    }
+    }
+        function validationCheck(checkvalue2)
+        {
+        // to check a text to key in
+            if (checkvalue2 == ""){
+
+                return false;
+
+            }
+            else{
+                return true;
+            }
+        }
+
+        // ...
+
+
+
+</script>
+
+
+
+</html>
