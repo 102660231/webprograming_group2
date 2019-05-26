@@ -48,23 +48,23 @@
 // remove all items
     function RemoveButtonClick()
     {
-        var itemToAdd = document.getElementById("itemlist")
-        var stayitem = itemToAdd.lastElementChild;
-        while (stayitem)
-        {
-        itemToAdd.removeChild(stayitem);
-        stayitem= itemToAdd.lastElementChild;
-        }
-        //  var list= document.getElementById("itemlist");
-        // while(list.hasChildNodes()) 
-        // { 
-        //     list.removeChild(list.firstChild);
-            
+        // var itemToAdd = document.getElementById("itemlist")
+        // var stayitem = itemToAdd.lastElementChild;
+        // while (stayitem)
+        // {
+        // itemToAdd.removeChild(stayitem);
+        // stayitem= itemToAdd.lastElementChild;
         // }
+         var itemlist= document.getElementById("itemlist"); // this cannot be the same as another variable
+        while(itemlist.hasChildNodes()) 
+        { 
+            itemlist.removeChild(itemlist.firstChild);
+            
+        }
 
-        list =[];
+        list =[]; // you overwrote his variable
         //funtion to empty array
-        //for(i=0;i<list.length;i=i++)
+        //for(i=0;i<list.length;i++)
         //{
         //    list =[];
        // }
@@ -83,9 +83,12 @@
 
        //get item from user as value2
        // check if not -1
-       if (list.indexOf(value2)!=-1)
+    //    if (list.indexOf(value2)!=-1)
+    if ((value2 >-1 && value2 < list.length) && validationCheck(value2))
+
        {
-        list.splice(list.indexOf(value2),1);
+        // list.splice(list.indexOf(value2),1);
+        list.splice(value2 - 1,1);
 
          //clear screen
          var itemToAdd = document.getElementById("itemlist")
