@@ -54,14 +54,14 @@
         // itemToAdd.removeChild(stayitem);
         // stayitem= itemToAdd.lastElementChild;
         // }
-         var itemlist= document.getElementById("itemlist"); // this cannot be the same as another variable
+         var itemlist= document.getElementById("itemlist"); 
         while(itemlist.hasChildNodes()) 
         { 
             itemlist.removeChild(itemlist.firstChild);
             
         }
 
-        list =[]; // you overwrote his variable
+        list =[]; 
         //funtion to empty array
         //for(i=0;i<list.length;i++)
         //{
