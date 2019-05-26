@@ -5,7 +5,7 @@ addButton.onclick = addButtonClick;
 var removeButton = document.getElementById("remove");
 removeButton.onclick= removeButtonClick;
 
-var singleButton = document.getElementById("single remove");
+var singleButton = document.getElementById("singleRemove");
 singleButton.onclick = singleButtonClick;
 
 // var button = document.getElementById("ourButton");
