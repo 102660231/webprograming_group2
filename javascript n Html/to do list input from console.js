@@ -1,5 +1,4 @@
 
-
     var addButton = document.getElementById("add");
     addButton.onclick = AddButtonClicked;
     var removeButton = document.getElementById("remove");
