@@ -89,7 +89,7 @@
         // list.splice(list.indexOf(value2),1);
         list.splice(value2 - 1,1);
 
-         //clear screen
+         //clear itemlist on screen
          var itemToAdd = document.getElementById("itemlist")
         var stayitem = itemToAdd.lastElementChild;
         while (stayitem)
@@ -97,20 +97,22 @@
             itemToAdd.removeChild(stayitem);
             stayitem= itemToAdd.lastElementChild;
         }
-       
+        //reset value input as space
+        document.getElementById("item").value ="" ;
+
          var i;
         for (i=0;i<list.length;i++)
         {
             var itemlist= document.createElement("li")
              var itemToAdd = document.getElementById("itemlist")
              itemToAdd.appendChild(itemlist)
-            var displayitem = document.createTextNode(list[i])
+            var displayitem = document.createTextNode(list[i])//access array content and put as var item to add to list(li)
             itemlist.appendChild(displayitem)
          }
        }
     }
         function validationCheck(checkvalue2)
-        {
+        {e
         // to check a text to key in
             if (checkvalue2 == "")
             {
