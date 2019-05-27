@@ -127,9 +127,9 @@
         }
 
         // ...
-       // function toggleClick()
-        //{
+        function toggleClick()
+        {
             
       //      document.getElementById(itemlist).style.color="red";
-      //  }
+        }
 
