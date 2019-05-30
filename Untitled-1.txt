@@ -1,0 +1,12 @@
+<body> style="margin:0 10%";
+text-align:centre;">
+<h1 class="header-title">
+<h1>SIMPLE BROWN BACKGROUND</H1>
+<div>
+<div style="width:205px;height:205px;margin:25px;
+display inline-block;line-height:205px;background-color:37E6000;">square
+</div>
+<hr style="border:dashed 1.5pc black;"/>
+<h2 style="color:#7E6000;">h2 -Lorem ipsum</h2>
+<p>random test here v random test here v random text here randon text here random text here random text here random test here random test here random texgt here random texgt here</p>
+</body>

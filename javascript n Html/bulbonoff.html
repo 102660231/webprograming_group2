@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick>click nothing happned as no function </button>
+
+<button onclick="myfuntion()">Turn off the light</button>
+<button  onclick ="displayfuntion()">click me oriigal text in id"demo' = where are you</button>
+<button onclick="calculate()">click me to check</button>
+
+<p id ='first'>
+</p>
+
+<p id = "demo">where are you
+</p>
+
+<p id="number">
+</p>
+<button onclick="mycalculate(item1,item2)">calculation
+</button>
+<button onclick="multiplyFuntion(f)">multiply
+</button>
+
+
+
+
+
+<p id ="displayReturn">
+</p>
+<p id ="displayReturn1">
+    </p>
+<script>
+function myfuntion()
+{
+    document.getElementById('first').innerHTML="i am the first text to show once you click"
+}
+
+function displayfuntion()
+{
+
+document.getElementById("demo").innerHTML = "My First JavaScript";
+}
+function calculate()
+{
+    var a =45;
+    var b =3;
+    var sum = a + b;
+    document.getElementById("number").innerHTML= "sum for a+b) ="+sum;
+}
+function mycalculate(item1,item2)
+{
+    return item1 +item2
+}
+document.getElementById("displayReturn").innerHTML=mycalculate(10,20);
+
+function multiplyFuntion(f)
+{
+    return 32 * f;
+}
+document.getElementById("displayReturn1").innerHTML=multiplyFuntion(6);
+/* */
+//document.write ()
+//document.write(5+9);
+
+</script>
+</body>
+</html>

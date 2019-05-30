@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="startCount()">Start !</button>
+<input type="text" id="txt">
+<button onclick="stopCount()">Stop!</button>
+
+<p>
+click to add 
+</p>
+
+<script>
+var c = 0;
+var t;
+var timer_is_on = 0;
+
+function timedCount() 
+{
+  document.getElementById("txt").value = c;
+  c = c + 1;
+    counter = c;
+
+  if (c )
+  {}
+
+  t = setTimeout(timedCount, 100);
+}
+
+function startCount() 
+{
+  if (!timer_is_on)
+    {
+    timer_is_on = 1;
+    timedCount();
+    }
+}
+
+ function stopCount()
+  {
+    clearTimeout(t);
+    timer_is_on = 0;
+  }
+</script>
+
+</body>
+</html>
