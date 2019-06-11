@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .cookiesContainer {
+  border: 1px solid black;
+  background-color: lightblue;
+  height: 400px;
+  width: 30%;
+ 
+}
+   .container {
+  position: relative;
+  text-align: left;
+  color: rgb(22, 14, 14);
+}
+  
+  .centered
+   {
+  position: absolute;
+  top: 30%;
+  left:8%;
+  transform: translate(-50%, -20%);
+  }
+  .button {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+  </style>
+<body>
+  
+
+    <div class ="cookiesContainer">
+ 
+        <p id ='cookies'> 
+        </p>
+        <!-- <div class="container"> -->
+                    <!-- to display image -->
+
+          <img src="cookie2.jpg" id  ="click" onclick=addCookie()>
+          <div class="centered">
+              <button class="button">click</button>
+          
+          </div>
+
+          <!-- </div> -->
+    
+    </div>
+
+      <div class="container">
+        
+          <!-- <img src="cookie.jpg" id  ="click" onclick=addPoints()> -->
+          <!-- <button id='cursor'>convert    </button> -->
+        <button id= 'cursor' onclick = addPoints()>click to get extra hands</button>
+        <p id ='points'></p>
+      </div>
+
+          <div>
+            <button id= 'addBaker' onclick = addBaker()>click to get another baker</button>
+            <p id ='baker'></p>
+
+           </div>
+
+
+           <script src="cookietimer.js"></script>
+
+
+</body>
+</html>
