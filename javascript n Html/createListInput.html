@@ -6,8 +6,8 @@
 
         <button id ="add">Add here</button>
         <button id ="remove">To delete</button>
-        <button id ="single remove">delete one only</button>
-
+        <button id ="singleDel">delete one only</button>
+        
         
         <ol id = "itemlist">
 
@@ -15,16 +15,19 @@
 
 
         <script>
-
+            //var textinput = document.getElementById("item").value;
+            //console.log (textinput);
             var toAddButton = document.getElementById("add");
                 toAddButton.onclick = addButton;
-            var removeButton = document.getElementById("remove");
-                removeButton.onclick = RemoveButtonClick
+            var removeButton1 = document.getElementById("remove");
+                removeButton1.onclick = removeButton;
+            var clearAll = document.getElementById("singleDel");
+            clearAll.onclick= singleButton;
             
             
-            list =[];
-           // addlist=[];
-        
+            
+            var newlist = [];
+           // add use enter item to nenwlist array  newlist =[];
             function addButton()
             {
                 
@@ -33,7 +36,7 @@
                  if (validationCheck(value2)==true)
 
                 {
-                    list.push(value2);
+                    newlist.push(value2);
                  
 
                     //reset value input as space
@@ -41,39 +44,68 @@
                 }
             
                 //show in the ol=itemlist
-                var itemToAdd = document.getElementById("itemlist")
+                document.getElementById("itemlist").innerHTML=''//reset itemlist to "   " clear the screen only
+                // need to delete the list in li
+
                 
                 var i=0;
-
-                for (i=0;i<list.length;i++)
+                
+                for (i=0;i<newlist.length;i++)
                 {
-                 console.log(list[i]);
-                 var itemToAdd= document.getElementById("itemlist")
-                 var list= document.createElement("li")
-                 itemToAdd.appendChild(list)
-                 itemInarray = document.createTextNode(list[i])
-                 itemlist.appendChild(itemInarray)
+                    
+                 console.log(newlist[i]);
+                 var itemlist= document.getElementById("itemlist")
+                 var itemToAdd= document.createElement("li")
+                 itemlist.appendChild(itemToAdd)
+
+                 itemToAdd = document.createTextNode(newlist[i])
+                 itemlist.appendChild(itemToAdd)
+
                 } 
             }
 
 
-               list=[];
             
-           // removeButton.onclick = RemoveButtonClick
+           // removeButton.onclick = RemoveButton
 
 
             function removeButton()
                 {
-                    var itemTodelete= document.getElementById("itemlist");
-                    list.removeChild(list.childNodes[0]);
+                    // var itemTodelete= document.getElementById("itemlist");
+                    document.getElementById("itemlist").innerHTML="";// clear screen only not the data in array
+                    newlist=[];
+                    // itemTodelete.removeChild(itemTodelete.childNodes[0]);
                 }
                 
 
 
-            singleButton.onclick=singleButton
+          //  singleButton.onclick=singleButton
 
             function singleButton()
-            {}
+            {
+
+                var userinput = document.getElementById("item").value ;
+                var usernumber = parseInt(userinput) - 1;
+
+                newlist.splice(usernumber,1);//dele the index of user entered
+                document.getElementById("itemlist").innerHTML="";//clear the screen
+
+                var i=0;
+                
+                for (i=0;i<newlist.length;i++)
+                {
+                    
+                 console.log(newlist[i]);
+                 var itemlist= document.getElementById("itemlist")
+                 var itemToAdd= document.createElement("li")
+                 itemlist.appendChild(itemToAdd)
+
+                 itemToAdd = document.createTextNode(newlist[i])
+                 itemlist.appendChild(itemToAdd)
+
+                }
+
+            }
 
             // to check a text to key in
             function validationCheck(checkvalue2)

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="person">display the person details here</p>
+
+
+ </body>
+ <script>
+ var human ={
+     name:"eve",
+     surname:"Teo",
+     ages:55,
+     sex:"f",
+     fullName: function()
+     {
+         return this.name+" "+this.surname;
+
+     }
+};
+document.getElementById("person").innerHTML= human.fullName()+human.ages;
+
+
+ </script>
+ </html>
