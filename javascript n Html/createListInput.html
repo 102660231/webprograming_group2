@@ -49,40 +49,46 @@
   padding: 5;
 }
 
-.nav li {
-  display: inline-block;
-  font-size: 20px;
-  padding: 20px;
-}
+
 
 span.b {
   display: inline-block;
   width: 30px;
   height: 100px;
-  padding: 5px;
+  padding: 100px;
   border: 1px solid blue;    
   background-color: yellow; 
 }
-
+div {
+  border: 1px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 80px;
+  margin-left: 40px;
+  padding: 100 px;
+  background-color: lightblue;
+}
   </style>
     <body>
 
 
-        <div span class="b">
+        <div>
             
             <input type ="text" id ="item">
-        <div span class="b">
+        
+            
             <button class="button" id ="add">Add here</button>
+            
             <button class ="button1" id ="remove">To delete</button>
             <button id ="singleDel">delete one only</button>
              <button id ="display">display array</button>
-    </div>
+    
         
-        <ol class="nav" id = "itemlist">
+        <ol id = "itemlist">
 
         </ol>
     
-
+    <div>
         <script>
             //var textinput = document.getElementById("item").value;
             //console.log (textinput);
