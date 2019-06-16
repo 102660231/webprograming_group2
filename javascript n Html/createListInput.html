@@ -7,6 +7,7 @@
         <button id ="add">Add here</button>
         <button id ="remove">To delete</button>
         <button id ="singleDel">delete one only</button>
+        <button id ="display">display array</button>
         
         
         <ol id = "itemlist">
@@ -23,7 +24,8 @@
                 removeButton1.onclick = removeButton;
             var clearAll = document.getElementById("singleDel");
             clearAll.onclick= singleButton;
-            
+            var displaybutton= document.getElementById("display");
+            displaybutton.onclick=displayfuntion;
             
             
             var newlist = [];
@@ -83,11 +85,35 @@
 
             function singleButton()
             {
+                
+                var userinput = document.getElementById("item").value;
 
-                var userinput = document.getElementById("item").value ;
-                var usernumber = parseInt(userinput) - 1;
+                        if (userinput == "")
+                        {
+                            document.getElementById("item").innerHTML=" ";//clear the space
+                            var userinput=document.getElementById("item").value;
 
-                newlist.splice(usernumber,1);//dele the index of user entered
+                        };
+                    
+            
+                var itemdelete = userinput;
+            
+                list =0;
+                for (list=0;list<newlist.length;list++)
+                {
+                    if (newlist[list]== itemdelete)
+
+                    {
+                        newlist.splice(list,1);
+                        
+                    };
+                };
+
+               // var userinput = document.getElementById("item").value ;
+              //  var usernumber = parseInt(userinput) - 1;
+
+              //  newlist.splice(usernumber,1);//dele the index of user entered
+
                 document.getElementById("itemlist").innerHTML="";//clear the screen
 
                 var i=0;
@@ -106,7 +132,13 @@
                 }
 
             }
+            //display arrray list newlist[], just type newlist
 
+           function displayfuntion()
+           {
+
+            document.getElementById("itemlist").innerHTML=newlist;
+           }
             // to check a text to key in
             function validationCheck(checkvalue2)
             {
