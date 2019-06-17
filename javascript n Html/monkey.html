@@ -6,12 +6,48 @@
         align-items: center;
         
     }
+    .question {
+			background-color: lightgrey;
+			border: 3px solid whitesmoke;
+			margin: 0 auto;
+			width: 70%;
+		}
+		.answerdiv {
+			display: inline-block;
+			width: 70%;
+		}
+		.choices {
+			text-align: center;
+		}
+		.choice {
+			display: inline-block;
+			background-color: white;
+			border: 2px solid rgb(150, 143, 143);
+			width: 50%;
+		}
+		.submit {
+			background-color: white;
+			border: 3px dotted black;
+			margin: 0 auto;
+			width: 70%;
+			height: 100px;
+			text-align: center;
+			position: relative;
+		}
+		.submitbuttondiv {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
 </style>
 <body>
 
 <h2>What did the monkey say to the cat ?</h2>
 
-<input id="buttonA" value="A. Hi Cat" />
+<button id="buttonA" value="A. Hi Cat" ></button>
 <input id="buttonB" value="B. Dont kick me" />
 <input id="buttonC" value="C.I really dont know what to say" />
 <input id="buttonD" value="D.*megh" />

@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>quiz/title>
-	
-	<style>
-		.question {
+<style>
+	p.transform{
+		text-transform: uppercase;
+	}
+.question {
 			background-color: lightgrey;
 			border: 3px solid whitesmoke;
 			margin: 0 auto;
 			width: 70%;
 		}
-		.answerdiv {
+.choice {
+	display: inline-block;
+  background-color: lightgrey;
+  color: rgb(22, 19, 19);
+  margin: 20px;
+  padding: 1px;
+  width:50%;
+  border-width:thick;
+  }
+
+.answerdiv {
 			display: inline-block;
 			width: 70%;
 		}
-		.choices {
+
+.choices {
 			text-align: center;
 		}
-		.choice {
-			display: inline-block;
-			background-color: white;
-			border: 2px solid rgb(150, 143, 143);
-			width: 50%;
-		}
-		.submit {
-			background-color: white;
-			border: 3px dotted black;
-			margin: 0 auto;
-			width: 70%;
-			height: 100px;
-			text-align: center;
-			position: relative;
-		}
-		.submitbuttondiv {
-			margin: 0;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-		}
-	</style>
+</style>
 </head>
 <body>
-	<div class="question">
+    <div class="question">
 		<h1>What did the donkey say to the cat?</h1>
 		<div class="choices">
 			<div class="choice"><p><strong>A. </strong>Hi Cat</p></div>
@@ -51,7 +40,7 @@
 			<div class="choice"><p><strong>C. </strong>I really dont know what to say</p></div>
 			<div class="choice"><p><strong>D. </strong>*megh*</p></div>
 			<div class="answerdiv">
-				<p>Answer: <input type="text" name="answer" id="answer1"></p>
+				<p class ="text-transform">Answer: <input type="text" name="answer" id="answer1"></p>
 			</div>
 		</div>
 	</div>
@@ -67,7 +56,10 @@
 			</div>
 		</div>
 		
-	</div>
+    </div>
+    
+
+    
 	<div class="question">
 		<h1>What is 3 + 65?</h1>
 		<div class="choices">
@@ -80,6 +72,9 @@
 			</div>
 		</div>
 	</div>
+
+
+
 	<div class="submit">
 		<div class="submitbuttondiv">
 			<button class="submitbutton" onclick="submit()">Submit</button>
