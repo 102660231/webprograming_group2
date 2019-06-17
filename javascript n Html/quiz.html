@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Challenge 2</title>
+	<script type="text/style" src="index.css"></script>
+	<style type="text/css">
+		.question {
+			background-color: grey;
+			border: 3px solid black;
+			margin: 0 auto;
+			width: 70%;
+		}
+		.answerdiv {
+			display: inline-block;
+			width: 70%;
+		}
+		.choices {
+			text-align: center;
+		}
+		.choice {
+			display: inline-block;
+			background-color: white;
+			border: 2px solid black;
+			width: 50%;
+		}
+		.submit {
+			background-color: white;
+			border: 3px dotted black;
+			margin: 0 auto;
+			width: 70%;
+			height: 100px;
+			text-align: center;
+			position: relative;
+		}
+		.submitbuttondiv {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div class="question">
+		<h1>What did the donkey say to the cat?</h1>
+		<div class="choices">
+			<div class="choice"><p><strong>A. </strong>Hi Cat</p></div>
+			<div class="choice"><p><strong>B. </strong>Dont kick me</p></div>
+			<div class="choice"><p><strong>C. </strong>I really dont know what to say</p></div>
+			<div class="choice"><p><strong>D. </strong>*megh*</p></div>
+			<div class="answerdiv">
+				<p>Answer: <input type="text" name="answer" id="answer1"></p>
+			</div>
+		</div>
+	</div>
+	<div class="question">
+		<h1>What did the cat say to the donkey?</h1>
+		<div class="choices">
+			<div class="choice"><p><strong>A. </strong>Hi Donkey</p></div>
+			<div class="choice"><p><strong>B. </strong>I sit. I sleep.</p></div>
+			<div class="choice"><p><strong>C. </strong>I really dont know what to say, you too big and scary</p></div>
+			<div class="choice"><p><strong>D. </strong>*meow*</p></div>
+			<div class="answerdiv">
+				<p>Answer: <input type="text" name="answer" id="answer2"></p>
+			</div>
+		</div>
+		
+	</div>
+	<div class="question">
+		<h1>What is 3 + 65?</h1>
+		<div class="choices">
+			<div class="choice"><p><strong>A. </strong>68</p></div>
+			<div class="choice"><p><strong>B. </strong>ahhhh</p></div>
+			<div class="choice"><p><strong>C. </strong>0</p></div>
+			<div class="choice"><p><strong>D. </strong>67</p></div>
+			<div class="answerdiv">
+				<p>Answer: <input type="text" name="answer" id="answer3"></p>
+			</div>
+		</div>
+	</div>
+	<div class="submit">
+		<div class="submitbuttondiv">
+			<button class="submitbutton" onclick="submit()">Submit</button>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript">
+	function submit() {
+		score = 0
+
+		ans1 = document.getElementById('answer1').value
+		if (ans1 == "D"){
+			score++
+		}
+		ans2 = document.getElementById('answer2').value
+		if (ans2 == "D"){
+			score++
+		}
+		ans3 = document.getElementById('answer3').value
+		if (ans3 == "A"){
+			score++
+		}
+
+		alert("Your score is " + score + "/3")
+	}
+</script>
+</html>
